@@ -1,0 +1,34 @@
+<div class="jumbotron">
+    <p *ngIf="jobs && jobs.length == 0"><em>No jobs!</em></p>
+    
+    <table class="table" *ngIf="jobs === undefined || jobs.length > 0">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Id</th>
+                <th>Description</th>
+                <th>Created by</th>
+                <th>Created date</th>
+                <th>Updated by</th>
+                <th>Updated date</th>
+                <th>Active jobs</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let job of jobs">
+                <td>
+                    <a [routerLink]="['/jobs', job.id]">
+                        <span class='glyphicon glyphicon-edit'></span> Edit
+                    </a>
+                </td>
+                <td>{{job.id}}</td>
+                <td>{{job.description}}</td>
+                <td>{{job.createdBy}}</td>
+                <td>{{job.createdOn}}</td>
+                <td>{{job.updatedBy}}</td>
+                <td>{{job.updatedOn}}</td>
+                <td>{{job.countActive}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
