@@ -1,28 +1,12 @@
-<div class='main-nav'>
-    <div class='navbar navbar-inverse'>
-        <div class='navbar-header'>
-            <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
-                <span class='sr-only'>Toggle navigation</span>
-                <span class='icon-bar'></span>
-                <span class='icon-bar'></span>
-                <span class='icon-bar'></span>
-            </button>
-            <a class='navbar-brand' [routerLink]="['/list']">Business Processes</a>
-        </div>
-        <div class='clearfix'></div>
-        <div class='navbar-collapse collapse'>
-            <ul class='nav navbar-nav'>
-                <li [routerLinkActive]="['link-active']">
-                    <a [routerLink]="['/jobs']">
-                        <span class='glyphicon glyphicon-home'></span> Processes
-                    </a>
-                </li>
-                <li [routerLinkActive]="['link-active']">
-                    <a [routerLink]="['/users']">
-                        <span class='glyphicon glyphicon-home'></span> Users
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
+<ul class='nav'>
+    <li class="nav-item">
+        <a [routerLink]="['/jobs']" class="nav-link" [routerLinkActive]="['active']">
+            <span class='glyphicon glyphicon-home'></span> Processes
+        </a>
+    </li>
+    <li>
+        <a [routerLink]="['/users']" class="nav-link" [routerLinkActive]="['active']">
+            <span class='glyphicon glyphicon-home'></span> Users
+        </a>
+    </li>
+</ul>
