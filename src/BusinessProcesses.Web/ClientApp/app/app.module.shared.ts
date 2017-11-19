@@ -7,10 +7,11 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './components/app/app.component';
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { JobsListComponent } from "./components/jobslist/jobs.list.component";
-import { JobService } from "../services/JobService";
+import { JobService } from "./services/JobService";
 import { UsersListComponent } from "./components/userslist/users.list.component";
-import { UserService } from "../services/UserService";
+import { UserService } from "./services/UserService";
 import { JobEditComponent } from "./components/jobedit/job.edit.component";
+import { ClarityModule } from 'clarity-angular';
 
 @NgModule({
     declarations: [
@@ -30,7 +31,8 @@ import { JobEditComponent } from "./components/jobedit/job.edit.component";
             { path: 'jobs/:id', component: JobEditComponent },
             { path: 'users', component: UsersListComponent },
             { path: '**', redirectTo: 'jobs' }
-        ])
+        ]),
+        ClarityModule.forRoot()
     ],
     providers: [
         JobService,

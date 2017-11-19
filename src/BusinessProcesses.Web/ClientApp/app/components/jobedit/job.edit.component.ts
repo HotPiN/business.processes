@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Job } from "../../../models/Job";
-import { JobService } from "../../../services/JobService";
+import { Job } from "../../models/Job";
+import { JobService } from "../../services/JobService";
 import {ActivatedRoute, Params} from "@angular/router";
 
 @Component({
